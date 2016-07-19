@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 
 var userName = prompt('Hey there! What\'s your name?');
 alert('Nice to meet you, ' + userName + '. I\'m sure you want to get to know me better, so I\'m going to ask you some questions.');
@@ -82,4 +82,4 @@ if (answerFive === 'YES' || answerFive === 'Y') {
 
 
 
-console.log("Yo what's up");
+console.log("Yo what's up");*/
