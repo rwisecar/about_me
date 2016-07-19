@@ -4,7 +4,11 @@ var userName = prompt('Hey there! What\'s your name?');
 alert('Nice to meet you, ' + userName + '. I\'m sure you want to get to know me better, so I\'m going to ask you some questions.');
 
 // question 1
-var answerOne = prompt('Was Rachael born in Seattle? Please answer Yes or No.');
+var questionOne = prompt('Was Rachael born in Seattle? Please answer Yes or No.');
+
+var answerOne = questionOne.toUpperCase();
+
+console.log(answerOne);
 
 if (answerOne === 'YES' || answerOne === 'Y') {
   alert('Sorry, Rachael was born in NYC.');
@@ -15,7 +19,11 @@ if (answerOne === 'YES' || answerOne === 'Y') {
 };
 
 // question 2
-var answerTwo = prompt('Does Rachael have any pets? Again, please answer with Yes or No.');
+var questionTwo = prompt('Does Rachael have any pets? Again, please answer with Yes or No.');
+
+var answerTwo = questionTwo.toUpperCase();
+
+console.log(answerTwo);
 
 if (answerTwo === 'YES' || answerTwo === 'Y'){
   alert('You know it. She\'s got one dog, named Lucy, who is a total terror. But in a good way.');
@@ -26,7 +34,11 @@ if (answerTwo === 'YES' || answerTwo === 'Y'){
 };
 
 // question 3
-var answerThree = prompt('Yes or No- the original Independence Day is one of Rachael\'s all time favorite movies.');
+var questionThree = prompt('Yes or No- the original Independence Day is one of Rachael\'s all time favorite movies.');
+
+var answerThree = questionThree.toUpperCase();
+
+console.log(answerThree);
 
 if (answerThree === 'YES' || answerThree === 'Y'){
   alert('Absolutely it is.');
@@ -37,7 +49,11 @@ if (answerThree === 'YES' || answerThree === 'Y'){
 };
 
 // question 4
-var answerFour = prompt('Rachael has a not-so-secret soft spot for Earth Wind and Fire. Yes or No?');
+var questionFour = prompt('Rachael has a not-so-secret soft spot for Earth Wind and Fire. Yes or No?');
+
+var answerFour = questionFour.toUpperCase();
+
+console.log(answerFour);
 
 if (answerFour === 'YES' || answerFour === 'Y') {
   alert('Hey, September is a fantastic song.');
@@ -47,8 +63,14 @@ if (answerFour === 'YES' || answerFour === 'Y') {
   alert('Sorry, I didn\'t get that. Let\'s try the next question.')
 };
 
+
 // question 5
-var answerFive = prompt('Okay, last question, I promise. Rachael has 5 little brothers. Yes or no?');
+var questionFive = prompt('Okay, last question, I promise. Rachael has 5 little brothers. Yes or no?');
+
+var answerFive = questionFive.toUpperCase();
+
+console.log(answerFive);
+
 
 if (answerFive === 'YES' || answerFive === 'Y') {
   alert('Sorry, she\'s only got one. His name\'s Phil, and he was more than enough brother growing up.');
