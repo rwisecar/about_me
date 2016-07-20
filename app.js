@@ -82,24 +82,24 @@ if (answerFive === 'YES' || answerFive === 'Y') {
 //question 6
 /* As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.*/
 
-var answerSix = parseInt(prompt('How old is Rachael?'));
 
-if (answerSix === 29) {
-  alert('That\'s right!');
-} else if (answerSix < 29){
-  for (var i = 0; i < 5; i++){
-    alert('I\'m sure she\'s flattered, but your guess is too low. Try again.');
-    parseInt(prompt('How old is Rachael?'));
-  };
-} else if (answerSix > 29){
-  for (var i = 0; i < 5; i++){
-    alert('Yikes! Too high. Try again.');
-    parseInt(prompt('How old is Rachael?'));
-  };
+/*This idea borrowed from Stack Overflow*/
+
+var i = 0;
+while (i < 5){
+  var answerSix = parseInt(prompt('How old is Rachael?'));
+    if(answerSix < 29){
+      alert('Your guess is too low! Try again.');
+      i++;
+    } else if (answerSix > 29){
+      alert('Your guess is too high! Try again.');
+      i++;
+    } else if (answerSix === 29){
+      alert('That\'s right!');
+      i=5;
+    };
 };
 
-
-console.log(answerSix);
 
 console.log('Yo what\'s up');
 
