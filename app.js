@@ -79,11 +79,10 @@ if (answerFive === 'YES' || answerFive === 'Y') {
   alert('Yeah, I don\'t think that makes sense.');
 };
 */
+
 //question 6
-/* As a developer, I want to add a sixth question to my guessing game that takes numeric input by prompting a user to guess a number (for instance, "What is my favorite number?" or "How many Pokémon did I catch yesterday?"), and indicates to the user whether the guess is 'too high' or 'too low', and gives the user exactly four opportunities to get the correct answer, so that my fancy programming skills are showcased.*/
 
-
-/*This idea borrowed from Stack Overflow*/
+/*This idea borrowed from Stack Overflow
 
 var i = 0;
 while (i < 5){
@@ -93,6 +92,9 @@ while (i < 5){
       i++;
     } else if (answerSix > 29){
       alert('Your guess is too high! Try again.');
+      i++;
+    } else if (isNaN(answerSix) === true){
+      alert('That\'s not even a number. Try again.');
       i++;
     } else if (answerSix === 29){
       alert('That\'s right!');
@@ -105,6 +107,42 @@ console.log('Yo what\'s up');
 
 /*As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
 
+/* Question 7 */
+
+var favoriteThings = ['puppies', 'monster movies', 'whiskers on kittens', 'crossword puzzles', 'crafts', 'indiana jones'];
+
+var guesses = 0;
+
+while (guesses < 6){
+  var inputSeven = prompt('What are a few of Rachael\'s favorite things?');
+  var answerSeven = inputSeven.toLowerCase();
+  for(var j = 0; j < favoriteThings.length; j++){
+    var arrayElement = favoriteThings[j];
+    console.log('This is my array element' , arrayElement);
+    console.log('This is my user input' , answerSeven);
+    if(answerSeven === arrayElement){
+      console.log('Right Comparison');
+      alert('That IS one of my favorite things!')
+      guesses = 7;
+      break;
+    } else {
+      console.log('Wrong Comparison');
+      alert('Sorry, that thing you said is not one of my favorites. Try again.');
+      break;
+    };
+  };
+  guesses++;
+};
+alert('Curious about the rest of my favorite things? Here they are: puppies, monster movies, whiskers on kittens, crossword puzzles, crafts, and Indiana Jones.');
+
+/*
+if(rightComparison){
+  alert('That IS one of my favorite things! Try to guess another.');
+} else if(wrongComparison){
+  alert('Sorry, that thing you said is lame. Try to guess more cool things.');
+};
+
+/*
 As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell the user how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. "You got 4 out of 7 questions correct, Bobbi! Better luck next time."
 
 User Stories (Stretch goals... not required!)

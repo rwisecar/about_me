@@ -60,6 +60,7 @@ h2, p {
 section {
   background-color: rgba(190, 192, 202, .4);
   margin-top: 40px;
+  padding-bottom: 20px;
 }
 
 section h2, p {
@@ -70,6 +71,6 @@ section h2, p {
 figure img{
   float: left;
   padding-right: 20px;
-  height: 20%;
-  width: 20%;
+  height: 10%;
+  width: 15%;
 }
