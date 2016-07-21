@@ -27,6 +27,7 @@ if (answerOne === 'YES' || answerOne === 'Y') {
 question1();
 
 // question 2
+function question2() {
 var inputTwo = prompt('Does Rachael have any pets? Again, please answer with Yes or No.');
 
 var answerTwo = inputTwo.toUpperCase();
@@ -43,6 +44,9 @@ if (answerTwo === 'YES' || answerTwo === 'Y'){
   alert('That just doesn\'t make sense to me. Let\'s try a new question.');
   var score2 = 0;
 };
+}
+
+question2();
 
 // question 3
 var inputThree = prompt('Yes or No- the original Independence Day is one of Rachael\'s all time favorite movies.');
