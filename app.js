@@ -21,7 +21,7 @@ if (answerOne === 'YES' || answerOne === 'Y') {
   alert('I\'m sorry, I don\'t understand. Let\'s try a new question.');
   var score1 = 0;
 };
- 
+
 // question 2
 var inputTwo = prompt('Does Rachael have any pets? Again, please answer with Yes or No.');
 
@@ -98,7 +98,7 @@ if (answerFive === 'YES' || answerFive === 'Y') {
 //question 6
 
 var i = 0;
-while (i < 5){
+while (i < 4){
   var answerSix = parseInt(prompt('How old is Rachael?'));
     if(answerSix < 29){
       alert('Your guess is too low! Try again.');
@@ -117,6 +117,9 @@ while (i < 5){
       i=5;
       var score6 = 1;
     };
+    if ((i === 4) && (answerSix !== 29)){
+      alert('Sorry, you\'ve run out of guesses. Rachael is 29 years old.');
+    }
 };
 
 //Question 7
