@@ -112,14 +112,15 @@ while (i < 4){
       alert('That\'s not even a number. Try again.');
       i++;
       var score6 = 0;
-    } else if (answerSix === 29){
+    } else {
       alert('That\'s right!');
       i=5;
       var score6 = 1;
     };
+    
     if ((i === 4) && (answerSix !== 29)){
       alert('Sorry, you\'ve run out of guesses. Rachael is 29 years old.');
-    }
+    };
 };
 
 //Question 7
@@ -144,6 +145,7 @@ while (guesses < 6){
       var comparison = false;
     };
   };
+
   if (comparison === true){
     alert('That IS one of my favorite things!');
     var score7 = 1;
