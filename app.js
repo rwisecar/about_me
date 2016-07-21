@@ -93,6 +93,7 @@ if (answerFour === 'YES' || answerFour === 'Y') {
 question4();
 
 // question 5
+function question5() {
 var inputFive = prompt('Rachael has 5 little brothers. Yes or no?');
 
 var answerFive = inputFive.toUpperCase();
@@ -109,6 +110,9 @@ if (answerFive === 'YES' || answerFive === 'Y') {
   alert('Yeah, I don\'t think that makes sense.');
   var score5 = 0;
 };
+}
+
+question5();
 
 
 //question 6
