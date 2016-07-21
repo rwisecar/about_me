@@ -1,6 +1,6 @@
 /* How to make CSS load before JS?? */
 'use strict';
-/*
+
 var userName = prompt('Hey there! What\'s your name?');
 alert('Nice to meet you, ' + userName + '. I\'m sure you want to get to know me better, so I\'m going to ask you some questions.');
 
@@ -13,10 +13,13 @@ console.log(answerOne);
 
 if (answerOne === 'YES' || answerOne === 'Y') {
   alert('Sorry, Rachael was born in NYC.');
+  var score1 = 0;
 } else if (answerOne === 'NO' || answerOne === 'N') {
   alert('That\'s right, she was born in NYC.');
+  var score1 = 1;
 } else {
   alert('I\'m sorry, I don\'t understand. Let\'s try a new question.');
+  var score1 = 0;
 };
 
 // question 2
@@ -27,11 +30,14 @@ var answerTwo = inputTwo.toUpperCase();
 console.log(answerTwo);
 
 if (answerTwo === 'YES' || answerTwo === 'Y'){
-  alert('You know it. She\'s got one dog, named Lucy, who is a total terror. But in a good way.');
+  alert('That\'s true. She\'s got one dog, named Lucy, who is a total terror. But in a good way.');
+  var score2 = 1;
 } else if (answerTwo === 'NO' || answerTwo === 'N'){
-  alert('That\'s not right. She has one crazy, crazy dog, named Lucy.');
+  alert('That\'s not right. She has one crazy dog, named Lucy.');
+  var score2 = 0;
 } else {
   alert('That just doesn\'t make sense to me. Let\'s try a new question.');
+  var score2 = 0;
 };
 
 // question 3
@@ -43,10 +49,13 @@ console.log(answerThree);
 
 if (answerThree === 'YES' || answerThree === 'Y'){
   alert('Absolutely it is.');
+  var score3 = 1;
 } else if (answerThree === 'NO' || answerThree === 'N'){
   alert('You\'ve got to be kidding me. ID4 is a classic.');
+  var score3 = 0;
 } else {
   alert('Sorry, you\'re just not making any sense. Let\'s move on.');
+  var score3 = 0;
 };
 
 // question 4
@@ -58,10 +67,13 @@ console.log(answerFour);
 
 if (answerFour === 'YES' || answerFour === 'Y') {
   alert('Hey, September is a fantastic song.');
+  var score4 = 1;
 } else if (answerFour === 'NO' || answerFour === 'N') {
   alert('Hate to break it to you, but this one\'s true.');
+  var score4 = 0;
 } else {
   alert('Sorry, I didn\'t get that. Let\'s try the next question.')
+  var score4 = 0;
 };
 
 // question 5
@@ -73,16 +85,17 @@ console.log(answerFive);
 
 if (answerFive === 'YES' || answerFive === 'Y') {
   alert('Sorry, she\'s only got one. His name\'s Phil, and he was more than enough brother growing up.');
+  var score5 = 0;
 } else if (answerFive === 'NO' || answerFive === 'N'){
   alert('That\'s right, she only had one brother, Phil, and that was enough for her.');
+  var score5 = 1;
 } else {
   alert('Yeah, I don\'t think that makes sense.');
+  var score5 = 0;
 };
-*/
+
 
 //question 6
-
-/*This idea borrowed from Stack Overflow
 
 var i = 0;
 while (i < 5){
@@ -90,31 +103,29 @@ while (i < 5){
     if(answerSix < 29){
       alert('Your guess is too low! Try again.');
       i++;
+      var score6 = 0;
     } else if (answerSix > 29){
       alert('Your guess is too high! Try again.');
       i++;
+      var score6 = 0;
     } else if (isNaN(answerSix) === true){
       alert('That\'s not even a number. Try again.');
       i++;
+      var score6 = 0;
     } else if (answerSix === 29){
       alert('That\'s right!');
       i=5;
+      var score6 = 1;
     };
 };
 
+//Question 7
 
-console.log('Yo what\'s up');
-
-/*As a developer, I want to add a seventh question to my guessing game that has multiple possible correct answers that are stored in an array. For instance, "Can you guess a state that I have lived in besides Washington?", so that even more of my programming skills are showcased. For now, I will structure this question so that the user has six tries to get a single correct answer, and upon using up those tries OR getting a correct answer, displays a message to the user indicating all of the possible correct answers.
-
-/* Question 7 */
-
-var favoriteThings = ['puppies', 'monster movies', 'whiskers on kittens', 'crossword puzzles', 'crafts', 'indiana jones'];
+var favoriteThings = ['puppies', 'monster movies', 'whiskers on kittens', 'crossword puzzles', 'crafts', 'bourbon'];
 
 var guesses = 0;
-
 while (guesses < 6){
-  var inputSeven = prompt('What are a few of Rachael\'s favorite things?');
+  var inputSeven = prompt('What is one of Rachael\'s favorite things?');
   var answerSeven = inputSeven.toLowerCase();
   for(var j = 0; j < favoriteThings.length; j++){
     var arrayElement = favoriteThings[j];
@@ -122,37 +133,33 @@ while (guesses < 6){
     console.log('This is my user input' , answerSeven);
     if(answerSeven === arrayElement){
       console.log('Right Comparison');
-      alert('That IS one of my favorite things!')
+      var comparison = true;
       guesses = 7;
       break;
     } else {
       console.log('Wrong Comparison');
-      alert('Sorry, that thing you said is not one of my favorites. Try again.');
-      break;
+      var comparison = false;
     };
+  };
+  if (comparison === true){
+    alert('That IS one of my favorite things!');
+    var score7 = 1;
+  } else {
+    alert('Sorry, that thing you said is not one of my favorites. Try again.');
+    var score7 = 0;
   };
   guesses++;
 };
-alert('Curious about the rest of my favorite things? Here they are: puppies, monster movies, whiskers on kittens, crossword puzzles, crafts, and Indiana Jones.');
+alert('Curious about the rest of my favorite things? Here they are: puppies, monster movies, whiskers on kittens, crossword puzzles, crafts, and bourbon.');
 
 /*
-if(rightComparison){
-  alert('That IS one of my favorite things! Try to guess another.');
-} else if(wrongComparison){
-  alert('Sorry, that thing you said is lame. Try to guess more cool things.');
-};
-
-/*
-As a developer, I want to keep a tally of the total number of correct answers given by the user, and at the end of the game, tell the user how well they did with a personalized custom message that includes the number of correct answers and also addresses the user by name, e.g. "You got 4 out of 7 questions correct, Bobbi! Better luck next time."
-
-User Stories (Stretch goals... not required!)
-
-As a developer, I want to make my code more DRY by putting all of the questions, answers, and responses to the first five yes/no questions in my guessing game into arrays (or even one huge multidimensional array), and modifying the game logic such that a 'for' loop will control the flow from question to question.
-Make the number-guessing question use a random number as its correct answer.
-Move the guessing game to a separate HTML file, list the questions on the page, and then have the answers fill in on the page after the user provides the answers.
-
-Technical Requirements
-
-Expect that you will probably need both 'for' and 'while' structures for your sixth and seventh questions. But not necessarily.
-Use separate Git branches for the coding of the sixth and seventh questions, plus the coding of the tally of correct answers. Upon completion of the work in each branch, make a Pull Request to the master branch and merge the branch without deleting the branch.
+Score Message
 */
+
+var scoreTotal = score1 + score2 + score3 + score4 + score5 + score6 + score7;
+
+if (scoreTotal > 4){
+  alert('Congratulations, ' + userName + ', you scored ' + scoreTotal + ' out of 7 total questions. Great job!');
+} else {
+  alert('Hey there, ' + userName + ', you scored ' + scoreTotal + ' out of 7 total questions. Better luck next time.');
+};
