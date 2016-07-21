@@ -71,6 +71,7 @@ if (answerThree === 'YES' || answerThree === 'Y'){
 question3();
 
 // question 4
+function question4() {
 var inputFour = prompt('Rachael has a not-so-secret soft spot for Earth Wind and Fire. Yes or No?');
 
 var answerFour = inputFour.toUpperCase();
@@ -87,6 +88,9 @@ if (answerFour === 'YES' || answerFour === 'Y') {
   alert('Sorry, I didn\'t get that. Let\'s try the next question.')
   var score4 = 0;
 };
+}
+
+question4();
 
 // question 5
 var inputFive = prompt('Rachael has 5 little brothers. Yes or no?');
