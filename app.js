@@ -21,7 +21,7 @@ if (answerOne === 'YES' || answerOne === 'Y') {
   alert('I\'m sorry, I don\'t understand. Let\'s try a new question.');
   var score1 = 0;
 };
-
+ 
 // question 2
 var inputTwo = prompt('Does Rachael have any pets? Again, please answer with Yes or No.');
 
@@ -158,7 +158,7 @@ Score Message
 
 var scoreTotal = score1 + score2 + score3 + score4 + score5 + score6 + score7;
 
-if (scoreTotal > 4){
+if (scoreTotal > 3){
   alert('Congratulations, ' + userName + ', you scored ' + scoreTotal + ' out of 7 total questions. Great job!');
 } else {
   alert('Hey there, ' + userName + ', you scored ' + scoreTotal + ' out of 7 total questions. Better luck next time.');
