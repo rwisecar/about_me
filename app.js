@@ -49,6 +49,7 @@ if (answerTwo === 'YES' || answerTwo === 'Y'){
 question2();
 
 // question 3
+function question3() {
 var inputThree = prompt('Yes or No- the original Independence Day is one of Rachael\'s all time favorite movies.');
 
 var answerThree = inputThree.toUpperCase();
@@ -65,6 +66,9 @@ if (answerThree === 'YES' || answerThree === 'Y'){
   alert('Sorry, you\'re just not making any sense. Let\'s move on.');
   var score3 = 0;
 };
+}
+
+question3();
 
 // question 4
 var inputFour = prompt('Rachael has a not-so-secret soft spot for Earth Wind and Fire. Yes or No?');
