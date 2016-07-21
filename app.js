@@ -5,6 +5,7 @@ var userName = prompt('Hey there! What\'s your name?');
 alert('Nice to meet you, ' + userName + '. I\'m sure you want to get to know me better, so I\'m going to ask you some questions.');
 
 // question 1
+function question1() {
 var inputOne = prompt('Was Rachael born in Seattle? Please answer Yes or No.');
 
 var answerOne = inputOne.toUpperCase();
@@ -21,6 +22,9 @@ if (answerOne === 'YES' || answerOne === 'Y') {
   alert('I\'m sorry, I don\'t understand. Let\'s try a new question.');
   var score1 = 0;
 };
+}
+
+question1();
 
 // question 2
 var inputTwo = prompt('Does Rachael have any pets? Again, please answer with Yes or No.');
@@ -117,7 +121,7 @@ while (i < 4){
       i=5;
       var score6 = 1;
     };
-    
+
     if ((i === 4) && (answerSix !== 29)){
       alert('Sorry, you\'ve run out of guesses. Rachael is 29 years old.');
     };
