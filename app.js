@@ -6,8 +6,118 @@ alert('Nice to meet you, ' + userName + '. I\'m sure you want to get to know me 
 
 var scoreTotal = 0;
 
-// question 1
-function question1() {
+function game(){
+  myAge();
+  myFaves();
+  finalScore();
+}
+
+function questionEngine(question, answer, correct, wrong){
+  console.log('This is the ', question, answer, correct, wrong);
+  var userInput = prompt(question);
+  // console.log(userInput);
+  var userAnswer = userInput.toUpperCase();
+  // console.log(userAnswer);
+  if (userAnswer === answer){
+    alert(correct);
+    scoreTotal++;
+  } else {
+    alert(wrong);
+  };
+}
+var guts = [['Was Rachael born in Seattle? Please answer Yes or No', ('NO' || 'N'), 'That\'s right, she was born in NYC.', 'Sorry, she was born in NYC.'],
+['Does Rachael have any pets? Again, please answer with Yes or No.', ('YES' || 'Y'), 'That\'s true. She\'s got one dog, named Lucy, who is a total terror. But in a good way.', 'That\'s not right. She has one crazy dog, named Lucy.'],
+['Yes or No- the original Independence Day is one of Rachael\'s all time favorite movies.', ('YES' || 'Y'), 'Absolutely it is.', 'You\'ve got to be kidding me. ID4 is a classic.'],
+['Rachael has a not-so-secret soft spot for Earth Wind and Fire. Yes or No?', ('YES' || 'Y'), 'Hey, September is a fantastic song.', 'Hate to break it to you, but this one\'s true.'],
+['Rachael has 5 little brothers. Yes or no?', ('NO' || 'N'), 'That\'s right, she only had one brother, Phil, and that was enough for her.', 'Sorry, she\'s only got one. His name\'s Phil, and he was more than enough brother growing up.']];
+
+console.log(guts.length);
+
+for (var i = 0; i < guts.length; i++){
+  questionEngine(guts[i][0], guts[i][1], guts[i][2], guts[i][3], guts[i][4]);
+  console.log('This is the innards of guts ', guts[i][0], guts[i][1], guts[i][2], guts[i][3], guts[i][4]);
+  console.log(i);
+  console.log(guts[i]);
+};
+
+
+
+//question 6
+
+function myAge(){
+  var i = 0;
+  while (i < 4){
+    var answerSix = parseInt(prompt('How old is Rachael?'));
+    if(answerSix < 29){
+      alert('Your guess is too low! Try again.');
+      i++;
+    } else if (answerSix > 29){
+      alert('Your guess is too high! Try again.');
+      i++;
+    } else if (isNaN(answerSix) === true){
+      alert('That\'s not even a number. Try again.');
+      i++;
+    } else {
+      alert('That\'s right!');
+      i = 5;
+      scoreTotal++;
+    };
+    if ((i === 4) && (answerSix !== 29)){
+      alert('Sorry, you\'ve run out of guesses. Rachael is 29 years old.');
+    };
+  };
+}
+
+// //question 7
+//
+function myFaves(){
+
+  var favoriteThings = ['puppies', 'monster movies', 'whiskers on kittens', 'crossword puzzles', 'crafts', 'bourbon'];
+
+  var guesses = 0;
+  while (guesses < 6){
+    var inputSeven = prompt('What is one of Rachael\'s favorite things?');
+    var answerSeven = inputSeven.toLowerCase();
+    for(var j = 0; j < favoriteThings.length; j++){
+      var arrayElement = favoriteThings[j];
+      console.log('This is my array element' , arrayElement);
+      console.log('This is my user input' , answerSeven);
+      if(answerSeven === arrayElement){
+        console.log('Right Comparison');
+        var comparison = true;
+        guesses = 7;
+        break;
+      } else {
+        console.log('Wrong Comparison');
+        var comparison = false;
+      };
+    };
+
+    if (comparison === true){
+      alert('That IS one of my favorite things!');
+      scoreTotal++;
+    } else {
+      alert('Sorry, that thing you said is not one of my favorites. Try again.');
+    };
+    guesses++;
+  };
+
+  alert('Curious about the rest of my favorite things? Here they are: puppies, monster movies, whiskers on kittens, crossword puzzles, crafts, and bourbon.');
+}
+//
+// // Scoring
+function finalScore(){
+  if (scoreTotal > 3){
+    alert('Congratulations, ' + userName + ', you scored ' + scoreTotal + ' out of 7 total questions. Great job!');
+  } else {
+    alert('Hey there, ' + userName + ', you scored ' + scoreTotal + ' out of 7 total questions. Better luck next time.');
+  };
+}
+
+game();
+
+/* Old version:
+
   var inputOne = prompt('Was Rachael born in Seattle? Please answer Yes or No.');
 
   var answerOne = inputOne.toUpperCase();
@@ -174,7 +284,7 @@ function question7() {
 question7();
 // /*
 // Score Message
-// */
+//
 function finalScore() {
 
 
@@ -186,3 +296,4 @@ function finalScore() {
 }
 
 finalScore();
+*/
